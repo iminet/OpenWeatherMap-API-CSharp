@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net462;net5.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net462;net5.0;net6.0;net7.0</TargetFrameworks>
     <Copyright>Cole © 2022</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>Added package icon</PackageReleaseNotes>
-    <Version>1.0.2.2</Version>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <PackageReleaseNotes>Changed namespace and added .NET 6.0, 7.0 support</PackageReleaseNotes>
+    <Version>1.0.2.4</Version>
     <Authors>OpenWeatherAPI, swiftyspiffy, Atrejoe, iminet</Authors>
     <Product>.Net client for OpenWeatherAPI</Product>
     <PackageProjectUrl>https://github.com/iminet/OpenWeatherMap-API-CSharp</PackageProjectUrl>
@@ -13,11 +14,13 @@
     <PackageTags>OpenWeatherAPI weather</PackageTags>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
     <PackageIcon>openweathericon.png</PackageIcon>
-    <PackageId>Iminet.OpenWeatherMap</PackageId>
-    <AssemblyVersion>1.0.2.2</AssemblyVersion>
-    <FileVersion>1.0.2.2</FileVersion>
+    <PackageId>Iminetsoft.OpenWeatherMap</PackageId>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
+    <PackageVersion>$(Version)</PackageVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NeutralLanguage>en</NeutralLanguage>
+    <Description>C# Library to interact with the OpenWeatherMap API. Exact same layout as the api returns in JSON.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
